@@ -24,7 +24,6 @@ class RunLengthEncodingTests extends FunSuite with Matchers {
   }
 
   test("decode simple") {
-    pending
     RunLengthEncoding.decode("2A3B4C") should be ("AABBBCCCC")
   }
 
@@ -34,12 +33,10 @@ class RunLengthEncodingTests extends FunSuite with Matchers {
   }
 
   test("decode with single values") {
-    pending
     RunLengthEncoding.decode("12WB12W3B24WB") should be ("WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB")
   }
 
   test("decode(encode(...)) combination") {
-    pending
     RunLengthEncoding.decode(
         RunLengthEncoding.encode("zzz ZZ  zZ")) should be ("zzz ZZ  zZ")
   }
